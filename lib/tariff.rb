@@ -1,5 +1,9 @@
 require "tariff/version"
+require 'tariff/translator'
 
 module Tariff
-  # Your code goes here...
+  def self.hi(language = "english")
+    translator = Translator.new(language)
+    translator.hi       
+  end
 end
