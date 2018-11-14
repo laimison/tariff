@@ -6,7 +6,6 @@
 #
 
 require 'json'
-require 'pp'
 
 class Tariff
   def initialize

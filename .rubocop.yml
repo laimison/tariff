@@ -1,0 +1,36 @@
+AllCops:
+  TargetRailsVersion: 5.1 
+
+AllCops:
+  TargetRubyVersion: 2.4
+
+Rails/ApplicationRecord:
+  Enabled: false
+
+Style/BlockComments:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 500
+
+Metrics/BlockLength:
+  Max: 500
+
+Metrics/MethodLength:
+  Max: 500
+
+Metrics/ClassLength:
+  Max: 500
+
+Metrics/AbcSize:
+  Max: 250
+
+Metrics/CyclomaticComplexity:
+  Max: 40
+
+Metrics/PerceivedComplexity:
+  Max: 65
+
+AllCops:
+  Exclude:
+    - 'Gemfile'

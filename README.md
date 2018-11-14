@@ -17,7 +17,7 @@ For Ubuntu:
 For Redhat:
 `sudo yum install ruby`
 
-Make sure you have executed `bundle install` from project's directory to get all required gems installed
+You may need to execute `bundle install` from project's directory to get RSpec tool for unit tests and rubocop tool for styling.
 
 ## Installation
 
