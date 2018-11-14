@@ -1,43 +1,73 @@
 # Tariff
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/tariff`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+
+## Installation Prerequisites
+
+Make sure you have Ruby 2.4 or newest version installed
+
+For Mac OS:
+`brew install ruby`
+
+(no root access required in any step)
+
+For Ubuntu:
+`sudo apt-get install ruby-full`
+
+For Redhat:
+`sudo yum install ruby`
+
+Make sure you have executed `bundle install` from project's directory to get all required gems installed
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Here are options to execute this app. So you can choose one of them:
 
-```ruby
-gem 'tariff'
-```
+1) install as gem and check where `tariff` binary was installed:
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
+    $ cd to_this_project
+    
     $ gem install tariff
+    
+    $ gem contents tariff
+    
+    $ ./bin/tariff 
 
+2) Just execute from bin directory:
+
+    $ ./tariff
+    
+## Re-build gem
+
+Please review and use a Shell script:
+
+    $ ./build_and_install.sh
+    
+    $ gem contents tariff
+    
+If any issues, you can execute `bundle install` so this will install tools such as RSpec as defined in a Gemfile
+    
 ## Usage
 
-TODO: Write usage instructions here
+Here are examples to use this app:
 
-## Development
+```
+mac:bin user$ ./tariff cost 1000 0
+tariff1 £304.50
+tariff2 £378.00
+tariff3 £424.20
+tariff4 £424.20
+mac:bin user$ ./tariff.rb usage tariff1 gas 30
+1628.571 kWh
+mac:bin user$ ./tariff.rb 
+Usage: tariff.rb cost <POWER_USAGE> <GAS_USAGE>
+       or
+       tariff.rb usage <TARIFF_NAME> <FUEL_TYPE> <TARGET_MONTHLY_SPEND>
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/tariff. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Tariff project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/tariff/blob/master/CODE_OF_CONDUCT.md).
+Explanation:  POWER_USAGE - given annual power consumption in kWh
+              GAS_USAGE - given annual gas consumption in kWh
+              TARIFF_NAME - please check prices file for tariff names
+              FUEL_TYPE - power or gas'
+              TARGET_MONTHLY_SPEND - given target monthly spend (inclusive VAT)
+mac:bin user$
+```

@@ -1,46 +1,40 @@
-{
+{ 
+  "VAT": 5.00,
   "tariffs": {
     "tariff1": {
       "power": {
-        "kwh_price": 11.00,
-        "monthly_standing_price": 15.00,
-        "available": true
+        "kwh_price": 0.11,
+        "monthly_standing_price": 15.00
       },
       "gas": {
-        "kwh_price": 10.00,
-        "monthly_standing_price": 15.00,
-        "available": true 
+        "kwh_price": 0.10,
+        "monthly_standing_price": 15.00
       }
     },
     "tariff2": {
       "power": {
-        "kwh_price": 12.00,
-        "monthly_standing_price": 20.00,
-        "available": true
+        "kwh_price": 0.12,
+        "monthly_standing_price": 20.00
       },
       "gas": {
-        "kwh_price": 10.00,
-        "monthly_standing_price": 15.00,
-        "available": true 
+        "kwh_price": 0.10,
+        "monthly_standing_price": 15.00
       }
     },
     "tariff3": {
       "power": {
-        "kwh_price": 14.00,
-        "monthly_standing_price": 22.00,
-        "available": true
+        "kwh_price": 0.14,
+        "monthly_standing_price": 22.00
       },
       "gas": {
-        "kwh_price": 10.00,
-        "monthly_standing_price": 22.00,
-        "available": true 
+        "kwh_price": 0.10,
+        "monthly_standing_price": 22.00
       }
     },
     "tariff4": {
       "power": {
-        "kwh_price": 14.00,
-        "monthly_standing_price": 22.00,
-        "available": true
+        "kwh_price": 0.14,
+        "monthly_standing_price": 22.00
       }
     } 
   }
