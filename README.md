@@ -1,15 +1,19 @@
 # Tariff
 
-This application takes arguments as a input. These argumens are converted to integers if they look like numbers. Floats are accepted as well, but they are not easily managed when taking as input (inside the code and output it worked well) so could be reviewed later if there is a requirement to release this app. Output values are rounded to 2 decimal places and zeros are kept for pences.
-In json file if any fuel is not supplied, you can take out this block e.g. tariff4. It looks simpler than having true and false booleans.
-The app allows only 3 or 4 arguments depending on command 'cost' or 'usage'. So it has fixed and validated structure.
+This application takes arguments as a input. These argumens are converted to floats to make sure output is not affected. Output values are rounded to 2 decimal places and also zeros are kept for pences e.g. £10.00.
+In json file if any fuel is not supplied, you can take out this block. You can check the example: tariff4. It looks simpler than having true and false booleans.
+The app allows only 3 or 4 arguments depending on command 'cost' or 'usage'. So it has fixed, but also validated structure.
+This code contains unit tests and rubocop styling checks and they passed. In a code, I have decided to convert everything to 1 year to simplify calculations.
+VAT parameter is moved to json for easier management. It is accepted as integer or float.
+In addition, this program is packaged by using gem.
+
 JSON file is located at (data/prices.json)[data/prices.json]
 
 Thank you
 
 # My Questions
 
-I tariff costs e.g. £20.12333 internally in the app, should we round up or round down the price?
+If the tariff costs e.g. £20.12333, should we round up or round down the price for output?
 
 I have rounded down in a code so it outputs £20.12 in this case. You can search for "QUITE IMPORTANT" phrase.
 
