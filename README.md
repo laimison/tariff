@@ -53,9 +53,9 @@ tariff1 £304.50
 tariff2 £378.00
 tariff3 £424.20
 tariff4 £424.20
-mac:bin user$ ./tariff.rb usage tariff1 gas 30
+mac:bin user$ ./tariff usage tariff1 gas 30
 1628.571 kWh
-mac:bin user$ ./tariff.rb 
+mac:bin user$ ./tariff --help 
 Usage: tariff.rb cost <POWER_USAGE> <GAS_USAGE>
        or
        tariff.rb usage <TARIFF_NAME> <FUEL_TYPE> <TARGET_MONTHLY_SPEND>

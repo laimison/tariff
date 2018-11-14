@@ -1,4 +1,5 @@
 require 'tariff/version'
+require 'json'
 
 class Tariff
   def initialize
@@ -52,9 +53,8 @@ Explanation:  POWER_USAGE - given annual power consumption in kWh
     # Validate given arguments and calculate the results
     if arg1 =~ /^cost$/
       # Cost logic
-      if arg_size < 4 &&
-         arg2 && arg2.is_number? &&
-         arg3 && arg3.is_number?
+      if arg_size < 4 && arg2 && arg3
+        # Used integers to reduce complexity of floats - this part needs to be improved only if this app will be called by using floats
         annual_consumption_power = arg2.to_i
         annual_consumption_gas = arg3.to_i
 
@@ -103,11 +103,10 @@ Explanation:  POWER_USAGE - given annual power consumption in kWh
     elsif arg1 =~ /^usage$/
       # Usage logic
       if arg_size < 5 &&
-         arg2 && !arg2.is_number? &&
-         arg3 && !arg3.is_number? &&
-         arg4 && arg4.is_number?
-        tariff = arg2
-        fuel_type = arg3
+         arg2 && arg3 && arg4
+        # Used integers to reduce complexity of floats - this part needs to be improved only if this app will be called by using floats
+        tariff = arg2.to_s
+        fuel_type = arg3.to_s
         monthly_spend = arg4.to_i
         
         unless fuel_type =~ /^(gas|power)$/i

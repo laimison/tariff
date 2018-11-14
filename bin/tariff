@@ -8,17 +8,10 @@
 require 'json'
 require 'tariff'
 
-# Extend Ruby String class (this is needed to identify number from string directly)
-class String
-  def is_number?
-    true if Float(self) rescue false
-  end
-end
-
 # Using Tariff class
 my_tariff = Tariff.new()
 
 # Passing arguments to the main method
 tariff_output = my_tariff.tariff_comparison(ARGV)
 
-# puts tariff_output
+puts tariff_output
