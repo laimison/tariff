@@ -32,10 +32,6 @@ Here are options to execute this app. So you can choose one of them:
     $ gem contents tariff
     
     $ ./bin/tariff 
-
-2) Just execute from bin directory:
-
-    $ ./tariff
     
 ## Re-build gem
 
