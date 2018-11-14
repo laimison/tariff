@@ -8,8 +8,8 @@
 require 'json'
 require 'tariff'
 
-# Using Tariff class
-my_tariff = Tariff.new()
+# Using Tariff class
+my_tariff = Tariff.new
 
 # Passing arguments to the main method
 tariff_output = my_tariff.tariff_comparison(ARGV)

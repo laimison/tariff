@@ -31,6 +31,9 @@ Metrics/CyclomaticComplexity:
 Metrics/PerceivedComplexity:
   Max: 65
 
+Metrics/BlockNesting:
+  Max: 4
+  
 AllCops:
   Exclude:
     - 'Gemfile'
