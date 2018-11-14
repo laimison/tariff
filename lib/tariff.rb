@@ -91,10 +91,14 @@ Explanation:  POWER_USAGE - given annual power consumption in kWh
           annual_cost_hash[tariff] = format('%.2f', annual_cost)
         end
 
+        tariff_output = []
+        
         # Sorting by price and printing the output
         annual_cost_hash.sort_by { |_k, v| v.to_f }.each do |tariff_line|
-          puts tariff_line.join(' ').gsub(/ /, ' £')
+          tariff_output << tariff_line.join(' ').gsub(/ /, ' £')
         end
+        
+        tariff_output
       else
         tariff_usage
       end
@@ -129,7 +133,7 @@ Explanation:  POWER_USAGE - given annual power consumption in kWh
         annual_consumption = ((monthly_spend * 12) - (fuel_monthly_standing_price * 12 * @vat)) / (fuel_price * @vat)
 
         # Round down by watt
-        puts "#{annual_consumption.floor(3)} kWh"
+        "#{annual_consumption.floor(3)} kWh"
       else
         tariff_usage
       end
