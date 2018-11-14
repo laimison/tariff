@@ -1,6 +1,17 @@
 # Tariff
 
+This application takes arguments as a input. These argumens are converted to integers if they look like numbers. Floats are accepted as well, but they are not easily managed when taking as input (inside the code and output it worked well) so could be reviewed later if there is a requirement to release this app. Output values are rounded to 2 decimal places and zeros are kept for pences.
+In json file if any fuel is not supplied, you can take out this block e.g. tariff4. It looks simpler than having true and false booleans.
+The app allows only 3 or 4 arguments depending on command 'cost' or 'usage'. So it has fixed and validated structure.
+JSON file is located at (data/prices.json)[data/prices.json]
 
+Thank you
+
+# My Questions
+
+I tariff costs e.g. £20.12333 internally in the app, should we round up or round down the price?
+
+I have rounded down in a code so it outputs £20.12 in this case. You can search for "QUITE IMPORTANT" phrase.
 
 ## Installation Prerequisites
 
@@ -32,6 +43,14 @@ Here are options to execute this app. So you can choose one of them:
     $ gem contents tariff
     
     $ ./bin/tariff 
+    
+2) you can also install gem package from file
+
+    $ gem install --local tariff-0.1.0.gem
+    
+    $ gem contents tariff
+    
+Add binary to your PATH or call with full path
     
 ## Re-build gem
 
@@ -67,3 +86,13 @@ Explanation:  POWER_USAGE - given annual power consumption in kWh
               TARGET_MONTHLY_SPEND - given target monthly spend (inclusive VAT)
 mac:bin user$
 ```
+
+## Testing
+
+It contains one unit test to show that class can be easily tested, especially comparing input and output figures
+
+    $ rspec
+    
+It passes rubocop styling checks
+
+    $ rubocop
