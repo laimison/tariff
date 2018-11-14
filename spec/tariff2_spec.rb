@@ -1,6 +1,8 @@
-RSpec.describe Tariff do
+require 'tariff2'
+
+RSpec.describe Tariff2 do
   it "has a version number" do
-    expect(Tariff::VERSION).not_to be nil
+    expect(Tariff2::VERSION).not_to be nil
   end
   
   it 'true reports true' do

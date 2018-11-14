@@ -1,4 +1,4 @@
-class Tariff::Translator
+class Tariffb::Translator
     def initialize(language)
         @language = language
     end
