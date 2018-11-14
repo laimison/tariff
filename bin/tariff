@@ -92,9 +92,9 @@ if arg1 =~ /^cost$/
       # Print float with two digits regardless if this is zero for pences & writing tariff prices to hash for sorting
       annual_cost_hash[tariff] = "%.2f" % annual_cost
     end # prices.hash['tariffs'] each ends
-    
+        
     # Sorting by price and printing the output
-    annual_cost_hash.sort_by {|k, v| v}.each do |tariff_line|
+    annual_cost_hash.sort_by {|k, v| v.to_f}.each do |tariff_line|
       puts tariff_line.join(' ').gsub(/ /, ' £')
     end
   else
